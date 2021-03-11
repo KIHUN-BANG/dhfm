@@ -1,0 +1,165 @@
+$mainclor : #23b1ec;
+$lightGray : #f3f3f3;
+$maxWitdhOfContent : 1140px;
+
+div.wrap {
+  width: $maxWitdhOfContent;
+  margin:0 auto;
+}
+
+.main-jumbotron {
+  background-image: url("./res/main-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  max-height: 800px;
+  // opacity: 55%;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.main-navbar-background {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.main-navbar {
+  font-weight: 600;
+  max-width: $maxWitdhOfContent;
+  width: 100%;
+  margin : auto;
+}
+
+.main-jumbotron-content {
+  padding-top: 100px;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.main-jumbotron-content h4 {
+  color: white;
+  text-align: center;
+}
+
+.main-inner-jumbotron {
+  background-color: rgba( 255, 255, 255, 0.9 );
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.main-inner-jumbotron-content {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.main-jumbotron-button {
+  margin: auto;
+  display: block;
+  color: white;
+  border-color: white;
+}
+
+.main_icons {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  display: block;
+}
+
+.main-product-intro {
+  background-color: $mainclor;
+  width: 100%;
+  height: 15rem;
+  padding-top: 50px;
+  color: white;
+  text-align: center;
+}
+
+.main-product-intro-content {
+  max-width: $maxWitdhOfContent;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 0 8rem 0 8rem ;
+}
+
+.main-product-tabs {
+  max-width: $maxWitdhOfContent;
+  width: 100%;
+  background-color: $mainclor;  
+  text-align: center;
+  margin: auto;
+}
+
+.custom-nav-item {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.nav-link-custom {
+  color: white imp !important;
+  font-weight: 500;
+  font-size: large;
+  border-radius: 0% !important;
+  
+  &:link {
+    background-color: $mainclor;
+  }
+
+  &:visited {
+    background-color: white;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  &:active {
+    background-color: white;
+  }
+
+}
+
+.main-product-tab {
+  background-color: white;
+  color: white;
+}
+
+.pannel {
+  text-align: center;
+  align-items: center;
+}
+
+.pannelImage {
+  width: 180px;
+  height : 180px;
+}
+
+.tab-animation-enter {
+  opacity: 0;
+}
+
+.tab-animation-enter-active {
+  opacity: 1;
+  transition: all 1500ms;
+}
+
+.main-aboutus {
+  background-color: $lightGray ;
+  font-weight: 500;
+  padding-top : 120px;
+  padding-bottom : 120px;
+}
+
+.map-Container {
+  max-width: $maxWitdhOfContent;
+  width: 100%;
+  height: 500px;
+  margin-left : auto;
+  margin-right : auto;
+  margin-top : 50px;
+  border-radius: 5px;
+}
