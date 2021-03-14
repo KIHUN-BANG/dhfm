@@ -33,32 +33,23 @@ function App() {
                 <NavDropdown.Item>조직도</NavDropdown.Item>
                 <NavDropdown.Item>인증서</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="고객지원" id="basic-nav-dropdown">
-                <NavDropdown.Item>FAQ</NavDropdown.Item>
-                <NavDropdown.Item>온라인상담</NavDropdown.Item>
-                <NavDropdown.Item>견적요청</NavDropdown.Item>
-                <NavDropdown.Item>개인정보 보호정책</NavDropdown.Item>
-                <NavDropdown.Item>이용약관</NavDropdown.Item>
-              </NavDropdown>
               <NavDropdown title="제품정보" id="basic-nav-dropdown">
                 <NavDropdown.Item>링블로워</NavDropdown.Item>
                 <NavDropdown.Item>고압플린저 펌프</NavDropdown.Item>
                 <NavDropdown.Item>고압세척기</NavDropdown.Item>
                 <NavDropdown.Item>고압세척시스템</NavDropdown.Item>
+                <NavDropdown.Item>제품사진</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="사업분야" id="basic-nav-dropdown">
                 <NavDropdown.Item>블로워사업</NavDropdown.Item>
                 <NavDropdown.Item>펌프사업</NavDropdown.Item>
                 <NavDropdown.Item>펌프시스템사업</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="홍보센터" id="basic-nav-dropdown">
-                <NavDropdown.Item>제품사진</NavDropdown.Item>
-              </NavDropdown>
               <NavDropdown title="인재채용" id="basic-nav-dropdown">
                 <NavDropdown.Item>채용안내</NavDropdown.Item>
                 <NavDropdown.Item>복리후생</NavDropdown.Item>
               </NavDropdown>
-
+              <Nav.Link>고객지원</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Navbar>
