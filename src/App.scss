@@ -2,6 +2,10 @@ $mainclor : #23b1ec;
 $lightGray : #f3f3f3;
 $maxWitdhOfContent : 1140px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 div.wrap {
   width: $maxWitdhOfContent;
   margin:0 auto;
@@ -67,6 +71,11 @@ div.wrap {
   height: 60px;
   margin: auto;
   display: block;
+}
+
+.main-icons-content {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .main-product-intro {
@@ -150,10 +159,26 @@ div.wrap {
 .main-aboutus {
   background-color: $lightGray ;
   font-weight: 500;
-  padding-top : 120px;
-  padding-bottom : 120px;
+  padding-top : 80px;
+  padding-bottom : 80px;
 }
 
+.main-aboutus-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main-contactus {
+  background-color: white ;
+  font-weight: 500;
+  padding-top :80px;
+  padding-bottom : 80px;
+}
+
+.main-waytous {
+  background-color: $lightGray;
+  font-weight: 500;
+}
 .map-Container {
   max-width: $maxWitdhOfContent;
   width: 100%;

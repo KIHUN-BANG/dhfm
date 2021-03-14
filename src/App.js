@@ -28,10 +28,8 @@ function App() {
             <Nav className="ml-auto">
               <NavDropdown title="회사소개" id="basic-nav-dropdown">
                 <NavDropdown.Item>CEO 인사말</NavDropdown.Item>
-                <NavDropdown.Item>회사연혁</NavDropdown.Item>
+                <NavDropdown.Item href="#aboutUsId" aboutUsId>회사소개</NavDropdown.Item>
                 <NavDropdown.Item>경영방침</NavDropdown.Item>
-                <NavDropdown.Item>조직도</NavDropdown.Item>
-                <NavDropdown.Item>인증서</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="제품정보" id="basic-nav-dropdown">
                 <NavDropdown.Item>링블로워</NavDropdown.Item>
@@ -49,7 +47,7 @@ function App() {
                 <NavDropdown.Item>채용안내</NavDropdown.Item>
                 <NavDropdown.Item>복리후생</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link>고객지원</Nav.Link>
+              <Nav.Link href="#contactUsId">고객지원</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           </Navbar>
@@ -67,19 +65,19 @@ function App() {
           <div className="row main-inner-jumbotron-content">
             <div className="col-md-4">
               <img src={handshake} className="main_icons"/>
-              <div>
+              <div className="main-icons-content">
                 <h4>신뢰</h4>
               </div>
             </div>
             <div className="col-md-4">
               <img src={gear} className="main_icons"/>
-              <div>
+              <div className="main-icons-content">
                 <h4>기술</h4>
               </div>
             </div>
             <div className="col-md-4">
               <img src={support} className="main_icons"/>
-              <div>
+              <div className="main-icons-content">
                 <h4>지원</h4>
               </div>
             </div>
@@ -114,7 +112,7 @@ function App() {
       </Tab.Container>
       
       
-      <Jumbotron fluid className="main-aboutus">
+      <Jumbotron fluid className="main-aboutus" id="aboutUsId">
         <Container>
           <h1>About Us</h1>
           <hr/>
@@ -123,17 +121,22 @@ function App() {
             당사는 링블로워, 고압 플린저펌프, 고압 세척기, R/O 시스템용 고압 펌프 및 고압세척시스템을 제조, 판매하는 업체입니다
             균일한 고품질 제품 생산을 위해 항상 노력하는 자세를 유지하며, 책임있는 사후 관리를 위하여 전직원이 한마음으로 노력할 것입니다.
           </p>
+          <div className="main-aboutus-button">
+            <Button variant="outline-dark" size="lg">Learn more</Button>{' '}
+          </div>
         </Container>
       </Jumbotron>
 
-      <div className="wrap">
+      <Jumbotron fluid className="main-contactus" id="contactUsId">
         <Container>
           <h1>Contact Us</h1>
           <hr/>
           <Row>
             <Col xs={12} md={6}>
+              <br/>
               <h5>인천광역시 서구 설원로 94</h5>
               <h5>(인천광역시 서구 대곡동 415-14)</h5>
+              <br/>
               <p>E-mail : master@dhfm.co.kr</p>
               <p>대표전화 : 032-567-9087</p>
               <p>Fax : 032-567-9088</p>
@@ -157,17 +160,19 @@ function App() {
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                   <Form.Control as="textarea" rows={3} placeholder="상세 내용"/>
                 </Form.Group>
-                <Button variant="outline-primary">Submit</Button>
+                <Button variant="outline-dark">Submit</Button>
               </Form>
             </Col>
           </Row>
         </Container>
-      </div>
-      <div className="wrap">
-        <h1>오시는 길</h1>
-        <hr/>
-        <MapContainer />
-      </div>
+      </Jumbotron>
+      <Jumbotron fluid className="main-waytous">
+        <Container>
+          <h1>오시는 길</h1>
+          <hr/>
+          <MapContainer />
+        </Container>
+      </Jumbotron>
       <Footer/>
     </div>
 
