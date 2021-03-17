@@ -1,9 +1,11 @@
 import React , {useState, useEffect} from 'react';
-import {Navbar, NavDropdown, Nav, Jumbotron, Button, Tab, Row, Col, Container, Image, Form, FormLabel } from 'react-bootstrap';
+import {Navbar, NavDropdown, Nav, Jumbotron, Button, Tab, Row, Col, Container, Image, Form, FormLabel} from 'react-bootstrap';
+import {Switch, Route} from 'react-router-dom';
 import './App.scss';
 import {CSSTransition} from "react-transition-group";
 import MapContainer from "./MapContainer.js";
 import Footer from "./footer.js";
+import Introduction from "./introduction.js";
 
 // import images
 import gear from './res/icon_gear.svg';
@@ -13,46 +15,60 @@ import logo from './logo.svg';
 
 function App() {
 
+  return (
+    <div>
+      <div className="main-navbar-background">
+        <Navbar expand="lg" variant="light" className="main-navbar">
+        <Navbar.Brand href="/">대하산업기계 주식회사</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <NavDropdown title="회사소개" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/intro">CEO 인사말</NavDropdown.Item>
+              <NavDropdown.Item href="#aboutUsId" aboutUsId>회사소개</NavDropdown.Item>
+              <NavDropdown.Item>경영방침</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="제품정보" id="basic-nav-dropdown">
+              <NavDropdown.Item>링블로워</NavDropdown.Item>
+              <NavDropdown.Item>고압플린저 펌프</NavDropdown.Item>
+              <NavDropdown.Item>고압세척기</NavDropdown.Item>
+              <NavDropdown.Item>고압세척시스템</NavDropdown.Item>
+              <NavDropdown.Item>제품사진</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="사업분야" id="basic-nav-dropdown">
+              <NavDropdown.Item>블로워사업</NavDropdown.Item>
+              <NavDropdown.Item>펌프사업</NavDropdown.Item>
+              <NavDropdown.Item>펌프시스템사업</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="인재채용" id="basic-nav-dropdown">
+              <NavDropdown.Item>채용안내</NavDropdown.Item>
+              <NavDropdown.Item>복리후생</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#contactUsId">고객지원</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        </Navbar>
+      </div>
+
+      <Switch>
+        <Route exact path="/">
+          <MainPage id="homeId"></MainPage>
+        </Route>
+        <Route path="/intro">
+          <Introduction></Introduction>
+        </Route>
+      </Switch>
+    </div>
+  );
+}
+
+function MainPage(props) {
   let [tabAnimationSwitch, tabAnimationSwitchChange] = useState(false);
-  let [tabCSS, tabCSSChange] = useState([{"background-color" : "#23b1ec", "text" :"red"}]);
   let [tabNum, tabNumChange] = useState(0);
 
   return (
     <div>
       <div className="main-jumbotron">
-        <div className="main-navbar-background">
-          <Navbar expand="lg" variant="light" className="main-navbar">
-          <Navbar.Brand href="#home">대하산업기계 주식회사</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <NavDropdown title="회사소개" id="basic-nav-dropdown">
-                <NavDropdown.Item>CEO 인사말</NavDropdown.Item>
-                <NavDropdown.Item href="#aboutUsId" aboutUsId>회사소개</NavDropdown.Item>
-                <NavDropdown.Item>경영방침</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="제품정보" id="basic-nav-dropdown">
-                <NavDropdown.Item>링블로워</NavDropdown.Item>
-                <NavDropdown.Item>고압플린저 펌프</NavDropdown.Item>
-                <NavDropdown.Item>고압세척기</NavDropdown.Item>
-                <NavDropdown.Item>고압세척시스템</NavDropdown.Item>
-                <NavDropdown.Item>제품사진</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="사업분야" id="basic-nav-dropdown">
-                <NavDropdown.Item>블로워사업</NavDropdown.Item>
-                <NavDropdown.Item>펌프사업</NavDropdown.Item>
-                <NavDropdown.Item>펌프시스템사업</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="인재채용" id="basic-nav-dropdown">
-                <NavDropdown.Item>채용안내</NavDropdown.Item>
-                <NavDropdown.Item>복리후생</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#contactUsId">고객지원</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-          </Navbar>
-        </div>
-
         <div className="container">
           <div className="main-jumbotron-content">
             <h4>안녕하세요</h4>
@@ -84,6 +100,7 @@ function App() {
           </div>
         </Jumbotron>
       </div>
+
       <div className="main-product-intro">
         <div className="main-product-intro-content">
           <h2>Sed adipising ornare risus</h2>
@@ -175,9 +192,9 @@ function App() {
       </Jumbotron>
       <Footer/>
     </div>
-
   );
 }
+
 
 function TabContent(props) {
 

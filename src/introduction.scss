@@ -1,0 +1,55 @@
+$lightGray : #f3f3f3;
+$maxWitdhOfContent : 1140px;
+
+.intro-banner {
+  position: relative;
+  z-index: 1;
+  height: 20vh;
+  max-height: 200px;
+  width: 100%;
+  display: table;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("./res/intro-background.jpg") center center;
+    opacity: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.intro-banner-container {
+  z-index: 1;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.intro-banner-container hr {
+  border: solid 1px rgb(104, 104, 104);
+  width: 300px;
+}
+
+.intro-banner-title {
+  letter-spacing: .25rem;
+}
+
+.intro-body-background {
+  background-color: $lightGray;
+  padding-top : 2em;
+  padding-bottom: 2em;
+}
+
+.intro-body {
+  background-color: white;
+  min-height: 60vh;
+  line-height: 2em;
+  padding: 2em;
+}
