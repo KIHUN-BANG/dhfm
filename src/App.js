@@ -4,8 +4,8 @@ import {Switch, Route} from 'react-router-dom';
 import './App.scss';
 import {CSSTransition} from "react-transition-group";
 import MapContainer from "./MapContainer.js";
-import Footer from "./footer.js";
-import Introduction from "./introduction.js";
+import Footer from "./Footer.js";
+import Introduction from "./Introduction.js";
 
 // import images
 import gear from './res/icon_gear.svg';

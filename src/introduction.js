@@ -1,5 +1,5 @@
 import React from 'react';
-import './introduction.scss';
+import './Introduction.scss';
 
 function Introduction() {
 
